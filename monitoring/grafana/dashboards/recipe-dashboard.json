@@ -1,0 +1,21 @@
+{
+  "title": "Recipe Hub - Monitoring",
+  "schemaVersion": 39,
+  "version": 1,
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Tổng số công thức",
+      "gridPos": {"x":0,"y":0,"w":6,"h":4},
+      "targets": [{"expr":"recipe_total","refId":"A"}]
+    },
+    {
+      "type": "timeseries",
+      "title": "HTTP request counter",
+      "gridPos": {"x":6,"y":0,"w":12,"h":4},
+      "targets": [{"expr":"recipe_http_requests_total","refId":"A"}]
+    }
+  ],
+  "time": {"from":"now-6h","to":"now"},
+  "refresh":"15s"
+}
